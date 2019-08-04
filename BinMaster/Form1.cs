@@ -134,6 +134,11 @@ namespace BinMaster
             {
                 AddToComboBox.UpdateItems(cbGameDir.Text, cbResDir);
             }
+            //Ensure conv tex dir matches obj dir if checkbox is selected
+            if(chkConvTexInObjDir.Checked)
+            {
+                AddToComboBox.UpdateItems(cbConvObjDir.Text, cbConvTexDir);
+            }
 
             errorCheck();
             modelExtracted = false; //initialise value
