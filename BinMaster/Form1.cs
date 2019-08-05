@@ -311,7 +311,7 @@ namespace BinMaster
 
                     if(curExtension.ToLower() == ".dds")
                     {
-                        File.Copy(sTexture.FullPath, Path.Combine(cbConvTexDir.Text, shortName + ".dds"));
+                        File.Copy(sTexture.FullPath, Path.Combine(cbConvTexDir.Text, shortName + ".dds"), true);
                     }
                     if (curExtension != targetExtension)
                     {
