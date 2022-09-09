@@ -474,7 +474,8 @@ namespace BinMaster
 
             string materialBlock = mStringBuilder.ToString();
 
-            string matchMaterial = "TMAP \"\\w+"; //doesn't get texture extension, which is actually useful
+            //string matchMaterial = "TMAP \"\\w+"; //doesn't get texture extension, which is actually useful
+            string matchMaterial = "TMAP \"[^\".]*"; //all set of character afters after TMAP " and before next " and . for extension
             MatchCollection mats = Regex.Matches(materialBlock, matchMaterial);
             
             foreach(Match m in mats)
